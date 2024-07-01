@@ -35,20 +35,20 @@
 
     <!-- Sezione dei commenti di Disqus -->
     <div id="disqus_thread"></div>
-    <script>
-        var disqus_config = function () {
-            this.page.url = window.location.href;  // URL della pagina corrente
-            this.page.identifier = window.location.pathname; // Identificatore della pagina
-        };
-
-        (function() {
-            var d = document, s = d.createElement('script');
-            s.src = 'https://YOUR_DISQUS_SHORTNAME.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>Abilita JavaScript per vedere i <a href="https://disqus.com/?ref_noscript">commenti di Disqus</a>.</noscript>
+<script>
+    var disqus_config = function () {
+    this.page.url = 
+    this.page.identifier = PAGE_IDENTIFIER; 
+    };
+    */
+    (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://mobili-disqus-com-3.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
     <!-- Script per caricare i mobili dal file JSON -->
     <script>
