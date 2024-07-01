@@ -1,26 +1,20 @@
 [
     {
-        "immagine": "url_dell_immagine1.jpg",
-        "nome": "Nome del Mobile 1",
-        "descrizione": "Descrizione breve del mobile 1.",
-        "prezzo": "€100"
+        "immagine": "como1.jpeg",
+        "nome": "como",
+        "descrizione": "betulla, del 1900, largo 1.5m",
+        "prezzo": "€120"
     },
     {
-        "immagine": "url_dell_immagine2.jpg",
-        "nome": "Nome del Mobile 2",
-        "descrizione": "Descrizione breve del mobile 2.",
-        "prezzo": "€200"
+        "immagine": "sedia1.jpeg",
+        "nome": "sedia",
+        "descrizione": "abete, del 1700, altezza 1m",
+        "prezzo": "€60"
     },
     {
-        "immagine": "url_dell_immagine3.jpg",
-        "nome": "Nome del Mobile 3",
-        "descrizione": "Descrizione breve del mobile 3.",
-        "prezzo": "€300"
-    },
-    {
-        "immagine": "url_dell_immagine4.jpg",
-        "nome": "Nome del Mobile 4",
-        "descrizione": "Descrizione breve del mobile 4.",
-        "prezzo": "€400"
+        "immagine": "tavolo1.jpeg",
+        "nome": "tavolo",
+        "descrizione": "abete, data non sicura, largo 1m, lunghezza 2m.",
+        "prezzo": "€230"
     }
 ]
