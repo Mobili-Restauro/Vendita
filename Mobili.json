@@ -1,0 +1,26 @@
+[
+    {
+        "immagine": "url_dell_immagine1.jpg",
+        "nome": "Nome del Mobile 1",
+        "descrizione": "Descrizione breve del mobile 1.",
+        "prezzo": "€100"
+    },
+    {
+        "immagine": "url_dell_immagine2.jpg",
+        "nome": "Nome del Mobile 2",
+        "descrizione": "Descrizione breve del mobile 2.",
+        "prezzo": "€200"
+    },
+    {
+        "immagine": "url_dell_immagine3.jpg",
+        "nome": "Nome del Mobile 3",
+        "descrizione": "Descrizione breve del mobile 3.",
+        "prezzo": "€300"
+    },
+    {
+        "immagine": "url_dell_immagine4.jpg",
+        "nome": "Nome del Mobile 4",
+        "descrizione": "Descrizione breve del mobile 4.",
+        "prezzo": "€400"
+    }
+]

@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.furniture-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.furniture-table th, .furniture-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.furniture-table th {
+    background-color: #f2f2f2;
+}
+
+.furniture-table img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.additional-info {
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .furniture-table, .furniture-table tr, .furniture-table th, .furniture-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .furniture-table th {
+        display: none;
+    }
+
+    .furniture-table td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+    }
+
+    .furniture-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+    }
+
+    .furniture-table td:nth-of-type(1):before { content: "Immagine"; }
+    .furniture-table td:nth-of-type(2):before { content: "Informazioni"; }
+    .furniture-table td:nth-of-type(3):before { content: "Prezzo"; }
+}

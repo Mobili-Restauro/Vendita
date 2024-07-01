@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendita di Mobili</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Vendita di Mobili</h1>
+    </header>
+    
+    <main>
+        <table class="furniture-table">
+            <thead>
+                <tr>
+                    <th>Immagine</th>
+                    <th>Informazioni</th>
+                    <th>Prezzo</th>
+                </tr>
+            </thead>
+            <tbody id="mobili-container">
+                <!-- I mobili saranno caricati qui dinamicamente -->
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <section class="additional-info">
+            <h2>Ulteriori Informazioni</h2>
+            <p>Qui puoi aggiungere ulteriori informazioni sulla tua azienda, contatti, modalità di spedizione, ecc.</p>
+        </section>
+    </footer>
+
+    <!-- Sezione dei commenti di Disqus -->
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function () {
+            this.page.url = window.location.href;  // URL della pagina corrente
+            this.page.identifier = window.location.pathname; // Identificatore della pagina
+        };
+
+        (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://YOUR_DISQUS_SHORTNAME.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Abilita JavaScript per vedere i <a href="https://disqus.com/?ref_noscript">commenti di Disqus</a>.</noscript>
+
+    <!-- Script per caricare i mobili dal file JSON -->
+    <script>
+        fetch('Mobili.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('mobili-container');
+                data.forEach(mobile => {
+                    const row = document.createElement('tr');
+                    
+                    const imgCell = document.createElement('td');
+                    const img = document.createElement('img');
+                    img.src = mobile.immagine;
+                    img.alt = `Immagine di ${mobile.nome}`;
+                    imgCell.appendChild(img);
+                    
+                    const infoCell = document.createElement('td');
+                    const name = document.createElement('h2');
+                    name.textContent = mobile.nome;
+                    const description = document.createElement('p');
+                    description.textContent = mobile.descrizione;
+                    infoCell.appendChild(name);
+                    infoCell.appendChild(description);
+                    
+                    const priceCell = document.createElement('td');
+                    priceCell.textContent = mobile.prezzo;
+                    
+                    row.appendChild(imgCell);
+                    row.appendChild(infoCell);
+                    row.appendChild(priceCell);
+                    
+                    container.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Errore nel caricamento dei dati:', error));
+    </script>
+</body>
+</html>
